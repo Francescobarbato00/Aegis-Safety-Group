@@ -6,10 +6,11 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { HeroVisual } from "@/components/sections/HeroVisual";
+import { useBooking } from "@/components/booking/BookingContext";
 import { companyInfo } from "@/lib/data";
 
 export function Hero() {
-  const telHref = `tel:${companyInfo.phone.replace(/\s+/g, "")}`;
+  const { open: openBooking } = useBooking();
   const reduce = useReducedMotion();
 
   // H1 lines animate on mount (hero is above the fold). Line 2 (italic) enters
@@ -115,24 +116,29 @@ export function Hero() {
             {/* CTA group */}
             <FadeIn delay={0.65}>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:mt-6">
+                {/* Primary: apre il booking drawer */}
                 <Button
-                  href="#contatti"
+                  onClick={openBooking}
                   variant="primary"
                   size="lg"
                   className="w-full sm:w-auto"
                 >
-                  Richiedi un check-up gratuito
+                  Prenota una call
                   <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Button>
+                {/* Secondary: scrolla al form #contatti */}
                 <Button
-                  href={telHref}
+                  href="#contatti"
                   variant="secondary"
                   size="lg"
                   className="w-full sm:w-auto"
                 >
-                  Parla con un consulente
+                  Scrivici un messaggio
                 </Button>
               </div>
+              <p className="mt-4 text-sm text-fg-muted">
+                La prima call è un check-up gratuito di 15 minuti, senza impegno.
+              </p>
             </FadeIn>
           </div>
 
