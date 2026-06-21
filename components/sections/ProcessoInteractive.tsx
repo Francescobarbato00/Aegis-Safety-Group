@@ -21,6 +21,8 @@ export function ProcessoInteractive() {
   const [isHovering, setIsHovering] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const pillRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const pillContainerRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
 
   // Autoplay is allowed only if the user hasn't taken control and motion is ok
   const autoplayActive = !reduceMotion && !userTookControl;
@@ -36,16 +38,24 @@ export function ProcessoInteractive() {
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
 
-  // Auto-scroll the active pill to center (mobile)
+  // Center the active pill horizontally (mobile).
+  // Uses scrollLeft on the pill container — NOT scrollIntoView, which also moves
+  // the page vertically and would pull the whole page down to this section on
+  // load. Also skips the first render so nothing scrolls at mount.
   useEffect(() => {
-    const pill = pillRefs.current[activeStep];
-    if (pill) {
-      pill.scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-        inline: "center",
-        block: "nearest",
-      });
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
     }
+    const pill = pillRefs.current[activeStep];
+    const container = pillContainerRef.current;
+    if (!pill || !container) return;
+    const targetScroll =
+      pill.offsetLeft - container.offsetWidth / 2 + pill.offsetWidth / 2;
+    container.scrollTo({
+      left: targetScroll,
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
   }, [activeStep, reduceMotion]);
 
   const handleSelect = (i: number) => {
@@ -86,9 +96,10 @@ export function ProcessoInteractive() {
 
       {/* Mobile: horizontal pills */}
       <div
+        ref={pillContainerRef}
         role="tablist"
         aria-label="Fasi del processo"
-        className="-mx-6 flex gap-2 overflow-x-auto scrollbar-hide px-6 pb-1 lg:hidden"
+        className="relative -mx-6 flex gap-2 overflow-x-auto scrollbar-hide px-6 pb-1 lg:hidden"
       >
         {processSteps.map((step, i) => {
           const active = i === activeStep;
