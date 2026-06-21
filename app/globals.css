@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #fafaf7;
+  --color-bg-dark: #0b1424;
+  --color-bg-dark-deep: #070f1f;
+  --color-fg: #0f1b2d;
+  --color-fg-muted: #5b6472;
+  --color-fg-dark: #f5f7fa;
+  --color-fg-dark-muted: #94a3b8;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
+  --color-border: #e8e6de;
+  --color-border-dark: rgba(255, 255, 255, 0.08);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+  --font-serif: var(--font-instrument);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 7rem;
   }
 }
 
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* Hide scrollbar (used by the horizontal step pills on mobile) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Autoplay progress bar for the process steps */
+@keyframes process-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Infinite horizontal marquee (TrustBand — settori serviti) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Cyan wipe across the process dashboard on each step transition */
+@keyframes screen-flash-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.screen-flash-sweep {
+  animation: screen-flash-sweep 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen-flash-sweep {
+    animation: none;
+  }
+}
+
+/* ===== CURSORE CUSTOM (solo desktop con mouse fine) ===== */
+@media (pointer: fine) {
+  /* Nascondi il cursore di sistema globalmente */
+  body {
+    cursor: none;
+  }
+  /* MA mantieni il cursore di sistema sui campi di testo (per scrivere) */
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    cursor: auto;
+  }
+  /* Link e bottoni: niente cursore sistema (lo gestisce il custom) */
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Se l'utente preferisce ridurre il movimento, ripristina il cursore di sistema */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: auto;
+  }
+}
+
+/* Dot piccolo */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #06b6d4;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    opacity 0.2s ease,
+    width 0.25s ease,
+    height 0.25s ease,
+    background 0.25s ease;
+  will-change: transform;
+}
+
+.cursor-dot--hover {
+  width: 4px;
+  height: 4px;
+  background: #06b6d4;
+}
+
+.cursor-dot--down {
+  width: 6px;
+  height: 6px;
+}
+
+/* Anello esterno */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(6, 182, 212, 0.5);
+  pointer-events: none;
+  z-index: 9998;
+  transition:
+    opacity 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+  will-change: transform;
+}
+
+.cursor-ring--hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(6, 182, 212, 0.8);
+  background: rgba(6, 182, 212, 0.06);
+}
+
+.cursor-ring--down {
+  width: 30px;
+  height: 30px;
+  border-color: rgba(6, 182, 212, 0.9);
 }

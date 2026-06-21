@@ -1,0 +1,23 @@
+{
+  "name": "Aegis Safety Group",
+  "short_name": "Aegis",
+  "description": "Consulenza sicurezza sul lavoro: documentazione, formazione e monitoraggio continuo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1424",
+  "theme_color": "#0B1424",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

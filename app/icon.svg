@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sfondo arrotondato cyan (riconoscibilità a piccola scala) -->
+  <rect width="100" height="100" rx="22" fill="#06B6D4"/>
+  <!-- Scudo bianco compatto -->
+  <path d="M50 16 L77 27 L77 50 Q77 71 50 84 Q23 71 23 50 L23 27 Z" fill="#FFFFFF"/>
+  <!-- Check cyan dentro lo scudo, spesso per leggibilità a 16px -->
+  <path d="M38 50 L47 59 L63 39" fill="none" stroke="#06B6D4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
