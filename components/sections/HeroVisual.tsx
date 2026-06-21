@@ -30,8 +30,16 @@ export function HeroVisual() {
       aria-hidden="true"
       className="relative flex justify-center lg:justify-end"
     >
-      {/* Floating accent blob */}
-      <div className="pointer-events-none absolute -right-6 -top-10 h-48 w-48 rounded-full bg-accent/30 blur-3xl" />
+      {/* Floating accent blob — promosso a layer GPU isolato + blur più leggero
+          per non rallentare il compositor di Safari (estetica quasi identica). */}
+      <div
+        className="pointer-events-none absolute -right-6 -top-10 h-48 w-48 rounded-full bg-accent/30 blur-2xl"
+        style={{
+          transform: "translateZ(0)",
+          willChange: "transform",
+          contain: "layout style",
+        }}
+      />
 
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, x: 40 }}
