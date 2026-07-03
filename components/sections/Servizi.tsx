@@ -26,17 +26,16 @@ export function Servizi() {
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
               I nostri servizi
             </p>
-            <h2 className="mt-4 text-balance font-[family-name:var(--font-sora)] text-3xl font-medium leading-tight tracking-tight text-fg lg:text-5xl xl:text-6xl">
+            <h2 className="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-fg lg:text-5xl xl:text-6xl">
               Quattro risultati,{" "}
-              <em className="font-[family-name:var(--font-instrument)] italic text-accent">
+              <span className="text-accent">
                 un solo partner
-              </em>
+              </span>
               .
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-fg-muted lg:text-xl">
-              Scegli il risultato che ti serve. Documentazione, formazione,
-              assistenza, crescita: tutto gestito da noi, senza che tu debba
-              coordinare consulenti diversi.
+              Documentazione, formazione, assistenza, crescita. Tutto gestito da
+              noi: un solo interlocutore, nessun consulente da coordinare.
             </p>
           </div>
         </FadeIn>

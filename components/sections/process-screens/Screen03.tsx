@@ -17,7 +17,7 @@ export function Screen03() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h4 className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+          <h4 className="text-lg font-semibold text-fg">
             Calendario formazione
           </h4>
           <p className="mt-1 font-mono text-xs text-fg-muted">
@@ -26,7 +26,7 @@ export function Screen03() {
           </p>
         </div>
         <div className="shrink-0 text-right">
-          <p className="font-[family-name:var(--font-sora)] text-2xl font-medium leading-none text-fg">
+          <p className="text-2xl font-medium leading-none text-fg">
             <span className="text-accent">5</span>
           </p>
           <p className="mt-1 text-xs text-fg-muted">sessioni</p>

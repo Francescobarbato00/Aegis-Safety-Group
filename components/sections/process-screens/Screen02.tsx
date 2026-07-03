@@ -7,7 +7,7 @@ export function Screen02() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h4 className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+          <h4 className="text-lg font-semibold text-fg">
             Documentazione in redazione
           </h4>
           <p className="mt-1 font-mono text-xs text-fg-muted">
@@ -16,7 +16,7 @@ export function Screen02() {
           </p>
         </div>
         <div className="shrink-0 text-right">
-          <p className="font-[family-name:var(--font-sora)] text-2xl font-medium leading-none text-fg">
+          <p className="text-2xl font-medium leading-none text-fg">
             <span className="text-accent">4</span>
             <span className="text-fg-muted">/7</span>
           </p>
@@ -59,7 +59,7 @@ function DocRow({
     done: {
       icon: <Check className="h-3.5 w-3.5 text-accent" />,
       badge: "Pronto",
-      badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      badgeClass: "bg-accent/10 text-accent border-accent/30",
       progressClass: "bg-accent",
     },
     active: {

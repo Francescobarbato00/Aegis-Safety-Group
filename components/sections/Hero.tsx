@@ -35,7 +35,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(6,182,212,0.06), transparent 60%)",
+            "radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(30,143,69,0.06), transparent 60%)",
         }}
       />
 
@@ -71,7 +71,7 @@ export function Hero() {
             <FadeIn delay={0}>
               <div className="flex flex-col gap-2 text-xs sm:flex-row sm:items-center sm:gap-4">
                 <span className="flex items-center gap-1.5 text-fg-muted">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500 motion-reduce:animate-none" />
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent motion-reduce:animate-none" />
                   <span className="font-mono">Servizio attivo</span>
                 </span>
                 <span className="hidden text-fg-muted/40 sm:inline">·</span>
@@ -93,11 +93,8 @@ export function Hero() {
             </FadeIn>
 
             {/* H1 — editoriale, due righe con stagger */}
-            <h1 className="mt-3 text-balance font-[family-name:var(--font-sora)] text-4xl font-medium leading-[0.92] tracking-tight text-fg sm:text-5xl lg:mt-4 lg:text-[4rem] xl:text-[5rem]">
-              <motion.span
-                className="block font-[family-name:var(--font-instrument)] font-normal italic text-accent"
-                {...line(0.2)}
-              >
+            <h1 className="mt-3 text-balance text-4xl font-bold leading-[0.92] tracking-tight text-fg sm:text-5xl lg:mt-4 lg:text-[4rem] xl:text-[5rem]">
+              <motion.span className="block" {...line(0.2)}>
                 Conformi, sempre.
               </motion.span>
               <motion.span className="block" {...line(0.35)}>
@@ -108,8 +105,8 @@ export function Hero() {
             {/* Sottotitolo */}
             <FadeIn delay={0.5}>
               <p className="mt-4 max-w-xl text-balance text-base leading-relaxed text-fg-muted lg:mt-5 lg:text-lg">
-                Documentazione, formazione e monitoraggio continuo. Gestito da
-                noi, perché conformi non si è mai una volta sola.
+                Documentazione, formazione e monitoraggio continuo, gestiti da
+                noi.
               </p>
             </FadeIn>
 
@@ -137,7 +134,7 @@ export function Hero() {
                 </Button>
               </div>
               <p className="mt-4 text-sm text-fg-muted">
-                La prima call è un check-up gratuito di 15 minuti, senza impegno.
+                Prima call: check-up gratuito di 15 minuti. Senza impegno.
               </p>
             </FadeIn>
           </div>

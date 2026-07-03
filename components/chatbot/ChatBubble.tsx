@@ -65,7 +65,7 @@ export function ChatBubble({
         onClick={isOpen ? onClose : onOpen}
         aria-label={isOpen ? "Chiudi chat" : "Apri chat"}
         className={cn(
-          "relative h-14 w-14 rounded-full shadow-[0_12px_32px_-8px_rgba(6,182,212,0.5)] lg:h-16 lg:w-16",
+          "relative h-14 w-14 rounded-full shadow-[0_12px_32px_-8px_rgba(30,143,69,0.5)] lg:h-16 lg:w-16",
           "bg-accent transition-all duration-300 hover:bg-accent-hover",
           "group flex items-center justify-center",
           "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/30",

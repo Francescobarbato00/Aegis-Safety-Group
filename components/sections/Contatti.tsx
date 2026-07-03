@@ -35,16 +35,16 @@ export function Contatti() {
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
               Iniziamo
             </p>
-            <h2 className="mt-4 text-balance font-[family-name:var(--font-sora)] text-3xl font-medium leading-[1.05] tracking-tight text-fg lg:text-5xl xl:text-6xl">
+            <h2 className="mt-4 text-balance text-3xl font-bold leading-[1.05] tracking-tight text-fg lg:text-5xl xl:text-6xl">
               Raccontaci la tua azienda,{" "}
-              <em className="font-[family-name:var(--font-instrument)] italic text-accent">
+              <span className="text-accent">
                 pensiamo a tutto noi
-              </em>
+              </span>
               .
             </h2>
             <p className="mt-6 text-balance text-lg leading-relaxed text-fg-muted">
-              Compila il form: ti contattiamo entro 24 ore per organizzare un
-              check-up gratuito di 15 minuti. Senza impegno, senza vincoli.
+              Compila il form: ti contattiamo entro 24h per un check-up gratuito
+              di 15 minuti. Senza impegno.
             </p>
 
             {/* Trust micro-signals */}

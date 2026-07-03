@@ -21,17 +21,16 @@ export function Processo() {
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
               Come lavoriamo
             </p>
-            <h2 className="mt-4 text-balance font-[family-name:var(--font-sora)] text-3xl font-medium leading-tight tracking-tight text-fg lg:text-5xl">
+            <h2 className="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-fg lg:text-5xl">
               Un processo{" "}
-              <em className="font-[family-name:var(--font-instrument)] italic text-accent">
+              <span className="text-accent">
                 strutturato
-              </em>
+              </span>
               , dal primo contatto in poi.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-fg-muted lg:text-xl">
-              Quattro fasi pensate per portare la tua azienda dalla situazione
-              attuale alla piena conformità, senza che tu debba seguire la
-              burocrazia.
+              Quattro fasi per portarti alla piena conformità. Alla burocrazia
+              pensiamo noi.
             </p>
           </div>
         </FadeIn>

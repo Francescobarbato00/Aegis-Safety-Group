@@ -88,7 +88,7 @@ export function BookingDrawer() {
                     </button>
                   )}
                   <div>
-                    <h2 className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+                    <h2 className="text-lg font-semibold text-fg">
                       Prenota una call
                     </h2>
                     <p className="text-xs text-fg-muted">

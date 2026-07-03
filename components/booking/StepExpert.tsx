@@ -4,12 +4,8 @@ import { cn } from "@/lib/utils";
 import { useBooking } from "./BookingContext";
 import { experts, type Expert } from "@/lib/experts-data";
 
-const accentMap: Record<Expert["accent"], string> = {
-  cyan: "bg-accent/10 text-accent border-accent/30",
-  emerald: "bg-emerald-500/10 text-emerald-600 border-emerald-500/30",
-  amber: "bg-amber-500/10 text-amber-600 border-amber-500/30",
-  violet: "bg-violet-500/10 text-violet-600 border-violet-500/30",
-};
+// Brand Book Aegis: un solo accento verde per tutti gli avatar (niente arcobaleno).
+const avatarStyle = "bg-accent/10 text-accent border-accent/30";
 
 export function StepExpert() {
   const { data, updateData, setStep } = useBooking();
@@ -21,7 +17,7 @@ export function StepExpert() {
 
   return (
     <div>
-      <h3 className="mb-1 font-[family-name:var(--font-sora)] text-xl font-medium text-fg">
+      <h3 className="mb-1 text-xl font-semibold text-fg">
         Con chi vuoi parlare?
       </h3>
       <p className="mb-6 text-sm text-fg-muted">
@@ -44,8 +40,8 @@ export function StepExpert() {
               {/* Avatar */}
               <div
                 className={cn(
-                  "flex h-12 w-12 shrink-0 items-center justify-center rounded-full border font-[family-name:var(--font-sora)] text-sm font-medium",
-                  accentMap[expert.accent],
+                  "flex h-12 w-12 shrink-0 items-center justify-center rounded-full border text-sm font-medium",
+                  avatarStyle,
                 )}
               >
                 {expert.initials}
@@ -53,7 +49,7 @@ export function StepExpert() {
               {/* Info */}
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between gap-2">
-                  <p className="font-[family-name:var(--font-sora)] font-medium text-fg">
+                  <p className="font-medium text-fg">
                     {expert.name}
                   </p>
                   <span className="shrink-0 font-mono text-[10px] text-fg-muted">

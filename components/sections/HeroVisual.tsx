@@ -51,8 +51,8 @@ export function HeroVisual() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:hidden" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60 motion-reduce:hidden" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
             </span>
             <span className="text-sm font-medium text-fg">Stato conformità</span>
           </div>
@@ -62,7 +62,7 @@ export function HeroVisual() {
         {/* Score */}
         <div className="mt-8">
           <div className="flex items-baseline gap-1.5">
-            <span className="font-[family-name:var(--font-sora)] text-6xl font-medium leading-none tracking-tight text-fg">
+            <span className="text-6xl font-medium leading-none tracking-tight text-fg">
               87
             </span>
             <span className="text-3xl font-medium text-fg-muted">/ 100</span>
@@ -128,7 +128,7 @@ function cnBadge(state: "ok" | "warning") {
   return [
     "shrink-0 rounded-md px-2 py-0.5 text-xs font-medium",
     state === "ok"
-      ? "bg-emerald-50 text-emerald-700"
+      ? "bg-accent/10 text-accent"
       : "bg-amber-50 text-amber-700",
   ].join(" ");
 }

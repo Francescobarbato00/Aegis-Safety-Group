@@ -157,7 +157,7 @@ export const processSteps: ProcessStep[] = [
     number: "01",
     title: "Check-up gratuito",
     description:
-      "Analizziamo la tua situazione attuale e identifichiamo le aree da mettere in regola, senza impegno.",
+      "Analizziamo la tua situazione e le aree da mettere in regola. Senza impegno.",
     icon: "Search",
     mockupTitle: "check-up",
     duration: "15 min",
@@ -166,7 +166,7 @@ export const processSteps: ProcessStep[] = [
     number: "02",
     title: "Analisi e documentazione",
     description:
-      "Redigiamo DVR, DUVRI, POS e tutta la documentazione obbligatoria su misura per la tua azienda.",
+      "DVR, DUVRI, POS e tutta la documentazione obbligatoria, su misura.",
     icon: "FileText",
     mockupTitle: "documentazione",
     duration: "5-10 giorni",
@@ -175,7 +175,7 @@ export const processSteps: ProcessStep[] = [
     number: "03",
     title: "Formazione del personale",
     description:
-      "Organizziamo i corsi obbligatori per lavoratori, RSPP, RLS, preposti, antincendio e primo soccorso.",
+      "Corsi obbligatori per lavoratori, RSPP, RLS, preposti, antincendio e primo soccorso.",
     icon: "GraduationCap",
     mockupTitle: "formazione",
     duration: "2-4 settimane",
@@ -184,7 +184,7 @@ export const processSteps: ProcessStep[] = [
     number: "04",
     title: "Monitoraggio continuo",
     description:
-      "Aggiornamenti normativi, scadenze e assistenza dedicata tutto l'anno. Dormi sereno.",
+      "Aggiornamenti, scadenze e assistenza dedicata, tutto l'anno. Dormi sereno.",
     icon: "ShieldCheck",
     mockupTitle: "monitoraggio",
     duration: "tutto l'anno",
@@ -196,7 +196,7 @@ export const faqs: Faq[] = [
     id: "tempi",
     question: "Quanto tempo serve per mettere in regola un'azienda?",
     answer:
-      "Dipende dalla dimensione e dalla complessità. Per una PMI con organico fino a 20 dipendenti, dal primo contatto al rilascio della documentazione completa (DVR, formazione iniziale, RSPP nominato) servono in media 3-4 settimane. Per realtà più strutturate o cantieri con esigenze specifiche (POS, valutazione rumore, vibrazioni) il tempo si estende, ma ti diamo sempre una stima precisa dopo il check-up gratuito iniziale.",
+      "Dipende da dimensione e complessità. Per una PMI fino a 20 dipendenti, dal primo contatto alla documentazione completa (DVR, formazione iniziale, RSPP) servono in media 3-4 settimane. Per realtà più strutturate o cantieri (POS, rumore, vibrazioni) serve più tempo: la stima precisa te la diamo dopo il check-up gratuito.",
     highlight: {
       label: "Tempo medio PMI standard",
       value: "3-4 settimane",
@@ -206,13 +206,13 @@ export const faqs: Faq[] = [
     id: "costi",
     question: "Quanto costa il servizio?",
     answer:
-      "Non esiste un listino fisso perché ogni azienda ha esigenze diverse: numero di dipendenti, settore, attività svolte, sedi multiple, livello di rischio. Dopo il check-up gratuito ti inviamo un preventivo dettagliato, trasparente, con prezzi chiari per ogni voce (RSPP, DVR, corsi). Lavoriamo prevalentemente con formula di assistenza annuale che include tutti gli adempimenti ricorrenti, ma sono possibili anche incarichi puntuali.",
+      "Nessun listino fisso: ogni azienda ha esigenze diverse (dipendenti, settore, sedi, rischio). Dopo il check-up ricevi un preventivo chiaro, voce per voce (RSPP, DVR, corsi). Di solito lavoriamo con assistenza annuale che include gli adempimenti ricorrenti, ma sono possibili anche incarichi puntuali.",
   },
   {
     id: "formazione-online",
     question: "La formazione si svolge online o in presenza?",
     answer:
-      "Entrambe. La formazione generale dei lavoratori (4 ore) e l'aggiornamento periodico possono essere erogati in modalità e-learning, come previsto dall'Accordo Stato-Regioni. La formazione specifica e i corsi che richiedono prova pratica (Antincendio, Primo Soccorso, Preposti) si svolgono in presenza presso la tua sede o nelle nostre aule. Per i nostri clienti in assistenza annuale organizziamo il calendario formativo direttamente noi.",
+      "Entrambe. Formazione generale (4 ore) e aggiornamenti periodici in e-learning, come previsto dall'Accordo Stato-Regioni. I corsi con prova pratica (Antincendio, Primo Soccorso, Preposti) si svolgono in presenza, alla tua sede o nelle nostre aule. Per i clienti in assistenza annuale il calendario formativo lo gestiamo noi.",
     reference: "Accordo Stato-Regioni 21 dicembre 2011",
   },
   {
@@ -220,26 +220,26 @@ export const faqs: Faq[] = [
     question:
       "Cosa succede se ricevo un'ispezione mentre siete il mio consulente?",
     answer:
-      "Ti affianchiamo in tutte le fasi del controllo. Per i nostri clienti in assistenza annuale, l'assistenza durante ispezioni di Ispettorato del Lavoro, ASL, Vigili del Fuoco è inclusa: ci confrontiamo con gli ispettori, forniamo documentazione richiesta, gestiamo eventuali contestazioni. Mantenere la documentazione sempre aggiornata significa che in caso di ispezione hai tutto in ordine — è esattamente il motivo per cui esistiamo.",
+      "Ti affianchiamo in ogni fase del controllo. Per i clienti in assistenza annuale l'assistenza durante le ispezioni (Ispettorato del Lavoro, ASL, Vigili del Fuoco) è inclusa: ci confrontiamo con gli ispettori, forniamo la documentazione, gestiamo le contestazioni. Con la documentazione sempre aggiornata, all'ispezione hai già tutto in ordine — è il motivo per cui esistiamo.",
   },
   {
     id: "territorio",
     question: "Operate in tutta Italia?",
     answer:
-      "Sì. La parte documentale (DVR, DUVRI, POS, valutazioni specifiche, manualistica HACCP) la gestiamo da remoto per aziende su tutto il territorio nazionale. Per la formazione in presenza e i sopralluoghi tecnici raggiungiamo direttamente la tua sede — confermiamo modalità e tempi di intervento durante il preventivo iniziale in base alla zona.",
+      "Sì. La parte documentale (DVR, DUVRI, POS, valutazioni specifiche, HACCP) la gestiamo da remoto in tutta Italia. Per formazione in presenza e sopralluoghi raggiungiamo la tua sede — modalità e tempi li confermiamo nel preventivo, in base alla zona.",
   },
   {
     id: "certificazioni",
     question: "Siete autorizzati a erogare formazione obbligatoria?",
     answer:
-      "Sì. La formazione che eroghiamo è conforme all'Accordo Stato-Regioni del 21 dicembre 2011 (rinnovato e integrato nel tempo), che disciplina i requisiti minimi per i corsi sulla sicurezza previsti dall'art. 37 del D.Lgs. 81/2008. I nostri docenti possiedono i requisiti previsti dal D.I. 6 marzo 2013. Tutti gli attestati che rilasciamo sono validi a tutti gli effetti di legge.",
+      "Sì. La nostra formazione è conforme all'Accordo Stato-Regioni del 21 dicembre 2011, che disciplina i corsi sulla sicurezza previsti dall'art. 37 del D.Lgs. 81/2008. I docenti hanno i requisiti del D.I. 6 marzo 2013 e gli attestati sono validi a tutti gli effetti di legge.",
     reference: "art. 37 D.Lgs. 81/2008 · D.I. 6 marzo 2013",
   },
   {
     id: "rischi",
     question: "Cosa rischio davvero se non sono in regola?",
     answer:
-      "Le sanzioni per la mancata redazione del DVR vanno da € 2.740 a € 7.014. La mancata formazione dei lavoratori comporta arresto da 2 a 4 mesi o ammenda da € 1.474 a € 6.388. In caso di infortunio sul lavoro, il datore di lavoro risponde personalmente — anche penalmente — se viene accertato il mancato rispetto degli obblighi. L'Ispettorato del Lavoro può inoltre sospendere l'attività in caso di gravi irregolarità.",
+      "Molto. Il DVR mancante costa da € 2.740 a € 7.014; la mancata formazione arresto da 2 a 4 mesi o ammenda da € 1.474 a € 6.388. In caso di infortunio il datore di lavoro risponde personalmente, anche penalmente. E l'Ispettorato può sospendere l'attività per gravi irregolarità.",
     reference: "art. 55 D.Lgs. 81/2008",
     highlight: {
       label: "Sanzione massima DVR mancante",
@@ -250,7 +250,7 @@ export const faqs: Faq[] = [
     id: "disdetta",
     question: "Posso disdire l'assistenza annuale se non sono soddisfatto?",
     answer:
-      "Sì. Il contratto di assistenza annuale prevede disdetta con preavviso, senza penali. Garantiamo continuità della documentazione fino a fine periodo e ti consegniamo tutti i file in formato modificabile — restano di proprietà tua, non nostra. Non lavoriamo con vincoli pluriennali: se non siamo all'altezza, devi poter andare via senza ostacoli.",
+      "Sì. Disdetta con preavviso, senza penali. Garantiamo continuità fino a fine periodo e ti consegniamo tutti i file in formato modificabile — sono tuoi, non nostri. Niente vincoli pluriennali: se non siamo all'altezza, devi poter andare via senza ostacoli.",
     highlight: {
       label: "Vincoli pluriennali",
       value: "Mai",
@@ -273,7 +273,6 @@ export type ServiceOutcome = {
   name: string;
   tagline: string;
   icon: string;
-  accent: "cyan" | "emerald" | "amber" | "violet";
   services: string[];
   ctaLabel: string;
 };
@@ -286,7 +285,6 @@ export const outcomes: ServiceOutcome[] = [
     tagline:
       "Tutta la documentazione obbligatoria, pronta e sempre aggiornata.",
     icon: "FileCheck",
-    accent: "cyan",
     services: [
       "DVR — Documento Valutazione Rischi",
       "DUVRI — Rischi da Interferenze",
@@ -305,7 +303,6 @@ export const outcomes: ServiceOutcome[] = [
     tagline:
       "Il tuo team formato, certificato e sempre in regola con la normativa.",
     icon: "GraduationCap",
-    accent: "emerald",
     services: [
       "Art. 37 — Formazione generale e specifica lavoratori",
       "Corso RSPP / Datore di Lavoro RSPP",
@@ -323,7 +320,6 @@ export const outcomes: ServiceOutcome[] = [
     name: "Dormi sereno",
     tagline: "Un consulente dedicato che pensa a tutto, tutto l'anno.",
     icon: "ShieldCheck",
-    accent: "amber",
     services: [
       "Incarico RSPP esterno",
       "Assistenza continuativa e supporto telefonico h24",
@@ -340,7 +336,6 @@ export const outcomes: ServiceOutcome[] = [
     name: "Cresci protetto",
     tagline: "Quando l'azienda cresce, la sicurezza cresce con lei.",
     icon: "TrendingUp",
-    accent: "violet",
     services: [
       "Audit preventivi per nuove sedi",
       "Consulenza per espansioni e nuove attività",

@@ -1,21 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #fafaf7;
-  --color-bg-dark: #0b1424;
-  --color-bg-dark-deep: #070f1f;
-  --color-fg: #0f1b2d;
-  --color-fg-muted: #5b6472;
-  --color-fg-dark: #f5f7fa;
-  --color-fg-dark-muted: #94a3b8;
-  --color-accent: #06b6d4;
-  --color-accent-hover: #0891b2;
-  --color-border: #e8e6de;
+  /* ===== BRAND BOOK AEGIS — palette ufficiale (pag. 24-25) ===== */
+
+  /* Backgrounds */
+  --color-bg: #f4f7fa; /* Ice White (era crema #fafaf7) */
+  --color-bg-dark: #071e3a; /* Aegis Navy (era #0b1424) */
+  --color-bg-dark-deep: #0b2b52; /* Deep Blue (era #070f1f) */
+
+  /* Foreground / testo */
+  --color-fg: #071e3a; /* Navy per testo su chiaro (era #0f1b2d) */
+  --color-fg-muted: #5b6b7f; /* Navy desaturato per testo secondario */
+  --color-fg-dark: #f4f7fa; /* Ice White per testo su scuro */
+  --color-fg-dark-muted: #94a9c0; /* Muted su scuro (blu chiaro) */
+
+  /* Accento VERDE (era cyan #06b6d4) */
+  --color-accent: #1e8f45; /* Safety Green — accento principale */
+  --color-accent-hover: #176f36; /* Safety Green scuro per hover */
+  --color-accent-active: #2dbe65; /* Active Green — highlight vivo */
+
+  /* Bordi */
+  --color-border: #e2e8f0; /* bordo chiaro freddo (era #e8e6de) */
   --color-border-dark: rgba(255, 255, 255, 0.08);
 
+  /* Font — Inter (Brand Book pag. 26) */
+  --font-inter: var(--font-inter);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-sora);
-  --font-serif: var(--font-instrument);
 }
 
 html {
@@ -140,7 +150,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 9999px;
-  background: #06b6d4;
+  background: #1e8f45; /* Safety Green (era cyan #06b6d4) */
   pointer-events: none;
   z-index: 9999;
   transition:
@@ -154,7 +164,7 @@ body {
 .cursor-dot--hover {
   width: 4px;
   height: 4px;
-  background: #06b6d4;
+  background: #1e8f45; /* Safety Green (era cyan #06b6d4) */
 }
 
 .cursor-dot--down {
@@ -170,7 +180,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 9999px;
-  border: 1.5px solid rgba(6, 182, 212, 0.5);
+  border: 1.5px solid rgba(30, 143, 69, 0.5); /* Safety Green */
   pointer-events: none;
   z-index: 9998;
   transition:
@@ -185,12 +195,12 @@ body {
 .cursor-ring--hover {
   width: 56px;
   height: 56px;
-  border-color: rgba(6, 182, 212, 0.8);
-  background: rgba(6, 182, 212, 0.06);
+  border-color: rgba(30, 143, 69, 0.8); /* Safety Green */
+  background: rgba(30, 143, 69, 0.06);
 }
 
 .cursor-ring--down {
   width: 30px;
   height: 30px;
-  border-color: rgba(6, 182, 212, 0.9);
+  border-color: rgba(30, 143, 69, 0.9); /* Safety Green */
 }

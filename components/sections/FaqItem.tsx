@@ -40,14 +40,14 @@ export function FaqItem({ faq, index, isOpen, onToggle }: Props) {
           {/* Numero */}
           <span
             className={cn(
-              "mt-0.5 shrink-0 font-[family-name:var(--font-sora)] text-sm font-medium transition-colors",
+              "mt-0.5 shrink-0 text-sm font-medium transition-colors",
               isOpen ? "text-accent" : "text-fg-dark-muted",
             )}
           >
             {String(index).padStart(2, "0")}
           </span>
           {/* Domanda */}
-          <span className="font-[family-name:var(--font-sora)] text-base font-medium leading-snug text-fg-dark lg:text-lg">
+          <span className="text-base font-semibold leading-snug text-fg-dark lg:text-lg">
             {faq.question}
           </span>
         </div>
@@ -86,8 +86,9 @@ export function FaqItem({ faq, index, isOpen, onToggle }: Props) {
             initial={reduced ? false : { height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={reduced ? undefined : { height: 0, opacity: 0 }}
-            transition={{ duration: reduced ? 0 : 0.3, ease: "easeOut" }}
+            transition={{ duration: reduced ? 0 : 0.2, ease: "easeOut" }}
             className="overflow-hidden"
+            style={reduced ? undefined : { willChange: "height" }}
           >
             <div className="px-5 pb-5 lg:px-6 lg:pb-6">
               <div className="ml-1 space-y-4 border-l border-accent/[0.2] pl-9 lg:pl-10">
@@ -102,7 +103,7 @@ export function FaqItem({ faq, index, isOpen, onToggle }: Props) {
                     <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-accent">
                       {faq.highlight.label}
                     </span>
-                    <span className="ml-auto font-[family-name:var(--font-sora)] text-lg font-medium text-fg-dark lg:text-xl">
+                    <span className="ml-auto text-lg font-medium text-fg-dark lg:text-xl">
                       {faq.highlight.value}
                     </span>
                   </div>

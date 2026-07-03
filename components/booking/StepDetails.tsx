@@ -30,7 +30,7 @@ export function StepDetails() {
 
   return (
     <div>
-      <h3 className="mb-1 font-[family-name:var(--font-sora)] text-xl font-medium text-fg">
+      <h3 className="mb-1 text-xl font-semibold text-fg">
         I tuoi dati
       </h3>
       <p className="mb-6 text-sm text-fg-muted">

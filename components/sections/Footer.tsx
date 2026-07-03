@@ -111,15 +111,14 @@ export function Footer() {
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.25em] text-accent">
                 Pronti quando lo sei tu
               </p>
-              <h2 className="text-balance font-[family-name:var(--font-sora)] text-4xl font-medium leading-[0.95] tracking-tight text-fg sm:text-5xl lg:text-6xl xl:text-7xl">
-                <span className="block font-[family-name:var(--font-instrument)] font-normal italic text-accent">
+              <h2 className="text-balance text-4xl font-bold leading-[0.95] tracking-tight text-fg sm:text-5xl lg:text-6xl xl:text-7xl">
+                <span className="block text-accent">
                   Conformi, sempre.
                 </span>
                 <span className="block">È il nostro mestiere.</span>
               </h2>
               <p className="mx-auto mt-8 max-w-xl text-balance text-lg text-fg-muted">
-                Un check-up gratuito di 15 minuti è tutto ciò che serve per
-                iniziare.
+                Bastano 15 minuti di check-up gratuito per iniziare.
               </p>
               <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
                 <Button variant="primary" size="lg" href="#contatti">
@@ -141,8 +140,21 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-10 py-16 md:grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:py-20">
             {/* Brand */}
             <div className="col-span-2 md:col-span-4 lg:col-span-1">
-              <Logo variant="dark" size={36} />
-              <p className="mt-4 max-w-xs font-[family-name:var(--font-instrument)] text-sm italic leading-relaxed text-fg-muted/80">
+              <div className="flex flex-col gap-3">
+                <span className="flex items-center gap-2.5">
+                  <Logo variant="dark" type="symbol" height={44} />
+                  <span className="flex items-baseline gap-1.5">
+                    <span className="text-xl font-bold tracking-tight text-fg">
+                      Aegis
+                    </span>
+                    <span className="text-sm text-fg-muted">Safety Group</span>
+                  </span>
+                </span>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-fg-muted">
+                  Proteggiamo il lavoro · Tuteliamo le persone · Creiamo valore
+                </p>
+              </div>
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-fg-muted/80">
                 Consulenza, documentazione e formazione per la sicurezza sul
                 lavoro.
               </p>

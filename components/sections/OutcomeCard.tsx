@@ -7,60 +7,25 @@ function getIcon(name: string): LucideIcon {
   return (Icons as unknown as Record<string, LucideIcon>)[name] || Icons.Box;
 }
 
-const accentClasses = {
-  cyan: {
-    bg: "bg-accent/[0.04]",
-    border: "border-accent/[0.15]",
-    iconBg: "bg-accent/[0.1]",
-    iconBorder: "border-accent/[0.25]",
-    iconColor: "text-accent",
-    numberColor: "text-accent",
-    bullet: "bg-accent/60",
-    hoverBorder: "hover:border-accent/40",
-    hoverShadow: "hover:shadow-[0_24px_60px_-24px_rgba(6,182,212,0.25)]",
-    cta: "text-accent hover:text-accent-hover",
-  },
-  emerald: {
-    bg: "bg-emerald-500/[0.03]",
-    border: "border-emerald-500/[0.15]",
-    iconBg: "bg-emerald-500/[0.08]",
-    iconBorder: "border-emerald-500/[0.25]",
-    iconColor: "text-emerald-600",
-    numberColor: "text-emerald-600",
-    bullet: "bg-emerald-500/60",
-    hoverBorder: "hover:border-emerald-500/40",
-    hoverShadow: "hover:shadow-[0_24px_60px_-24px_rgba(16,185,129,0.2)]",
-    cta: "text-emerald-700 hover:text-emerald-800",
-  },
-  amber: {
-    bg: "bg-amber-500/[0.03]",
-    border: "border-amber-500/[0.15]",
-    iconBg: "bg-amber-500/[0.08]",
-    iconBorder: "border-amber-500/[0.25]",
-    iconColor: "text-amber-600",
-    numberColor: "text-amber-600",
-    bullet: "bg-amber-500/60",
-    hoverBorder: "hover:border-amber-500/40",
-    hoverShadow: "hover:shadow-[0_24px_60px_-24px_rgba(245,158,11,0.2)]",
-    cta: "text-amber-700 hover:text-amber-800",
-  },
-  violet: {
-    bg: "bg-violet-500/[0.03]",
-    border: "border-violet-500/[0.15]",
-    iconBg: "bg-violet-500/[0.08]",
-    iconBorder: "border-violet-500/[0.25]",
-    iconColor: "text-violet-600",
-    numberColor: "text-violet-600",
-    bullet: "bg-violet-500/60",
-    hoverBorder: "hover:border-violet-500/40",
-    hoverShadow: "hover:shadow-[0_24px_60px_-24px_rgba(139,92,246,0.2)]",
-    cta: "text-violet-700 hover:text-violet-800",
-  },
+// Brand Book Aegis (pag. 25, 40): UN solo accento — il verde.
+// Niente arcobaleno: le 4 card sono cromaticamente coese (verde + navy) e si
+// distinguono per numero, icona e contenuto, non per colore.
+const brandAccent = {
+  bg: "bg-accent/[0.04]",
+  border: "border-accent/[0.15]",
+  iconBg: "bg-accent/[0.1]",
+  iconBorder: "border-accent/[0.25]",
+  iconColor: "text-accent",
+  numberColor: "text-accent",
+  bullet: "bg-accent/60",
+  hoverBorder: "hover:border-accent/40",
+  hoverShadow: "hover:shadow-[0_24px_60px_-24px_rgba(30,143,69,0.25)]",
+  cta: "text-accent hover:text-accent-hover",
 };
 
 export function OutcomeCard({ outcome }: { outcome: ServiceOutcome }) {
   const Icon = getIcon(outcome.icon);
-  const cls = accentClasses[outcome.accent];
+  const cls = brandAccent;
 
   return (
     <article
@@ -92,7 +57,7 @@ export function OutcomeCard({ outcome }: { outcome: ServiceOutcome }) {
           <div className="flex items-center gap-3">
             <span
               className={cn(
-                "font-[family-name:var(--font-sora)] text-sm font-medium",
+                "text-sm font-medium",
                 cls.numberColor,
               )}
             >
@@ -116,7 +81,7 @@ export function OutcomeCard({ outcome }: { outcome: ServiceOutcome }) {
 
         {/* Nome outcome + tagline */}
         <div className="mb-6">
-          <h3 className="font-[family-name:var(--font-sora)] text-3xl font-medium leading-tight tracking-tight text-fg lg:text-4xl">
+          <h3 className="text-3xl font-bold leading-tight tracking-tight text-fg lg:text-4xl">
             {outcome.name}
           </h3>
           <p className="mt-3 text-balance text-base leading-relaxed text-fg-muted lg:text-lg">

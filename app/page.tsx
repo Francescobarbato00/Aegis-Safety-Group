@@ -4,6 +4,7 @@ import { TrustBand } from "@/components/sections/TrustBand";
 import { Problema } from "@/components/sections/Problema";
 import { Processo } from "@/components/sections/Processo";
 import { Servizi } from "@/components/sections/Servizi";
+import { Approccio } from "@/components/sections/Approccio";
 import { Faq } from "@/components/sections/Faq";
 import { Contatti } from "@/components/sections/Contatti";
 import { Footer } from "@/components/sections/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <Problema />
         <Processo />
         <Servizi />
+        <Approccio />
         <Faq />
         <Contatti />
       </main>

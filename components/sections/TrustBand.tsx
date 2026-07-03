@@ -44,9 +44,9 @@ function StatRow() {
           <AnimatedCounter
             target={200}
             duration={1.8}
-            className="font-[family-name:var(--font-sora)] text-4xl font-medium leading-none tracking-tight text-fg lg:text-5xl xl:text-6xl"
+            className="text-4xl font-medium leading-none tracking-tight text-fg lg:text-5xl xl:text-6xl"
           />
-          <span className="font-[family-name:var(--font-sora)] text-2xl font-medium leading-none text-accent lg:text-3xl">
+          <span className="text-2xl font-medium leading-none text-accent lg:text-3xl">
             +
           </span>
         </div>
@@ -61,9 +61,9 @@ function StatRow() {
           <AnimatedCounter
             target={24}
             duration={1.5}
-            className="font-[family-name:var(--font-sora)] text-3xl font-medium leading-none tracking-tight text-fg lg:text-4xl"
+            className="text-3xl font-medium leading-none tracking-tight text-fg lg:text-4xl"
           />
-          <span className="font-[family-name:var(--font-sora)] text-xl font-medium leading-none text-fg-muted lg:text-2xl">
+          <span className="text-xl font-medium leading-none text-fg-muted lg:text-2xl">
             h
           </span>
         </div>
@@ -78,9 +78,9 @@ function StatRow() {
           <AnimatedCounter
             target={100}
             duration={1.8}
-            className="font-[family-name:var(--font-sora)] text-3xl font-medium leading-none tracking-tight text-fg lg:text-4xl"
+            className="text-3xl font-medium leading-none tracking-tight text-fg lg:text-4xl"
           />
-          <span className="font-[family-name:var(--font-sora)] text-xl font-medium leading-none text-fg-muted lg:text-2xl">
+          <span className="text-xl font-medium leading-none text-fg-muted lg:text-2xl">
             %
           </span>
         </div>
@@ -95,9 +95,9 @@ function StatRow() {
           <AnimatedCounter
             target={15}
             duration={1.2}
-            className="font-[family-name:var(--font-sora)] text-2xl font-medium leading-none tracking-tight text-fg lg:text-3xl"
+            className="text-2xl font-medium leading-none tracking-tight text-fg lg:text-3xl"
           />
-          <span className="font-[family-name:var(--font-sora)] text-lg font-medium leading-none text-fg-muted lg:text-xl">
+          <span className="text-lg font-medium leading-none text-fg-muted lg:text-xl">
             +
           </span>
         </div>
@@ -139,7 +139,7 @@ function ClientsMarquee() {
           {items.map((cat, i) => (
             <div key={i} className="flex shrink-0 items-center gap-3">
               <span className="text-xs text-accent/60">›</span>
-              <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-fg lg:text-base">
+              <span className="text-sm font-medium text-fg lg:text-base">
                 {cat}
               </span>
             </div>
@@ -169,8 +169,8 @@ function LiveNote() {
       {/* Live indicator + note */}
       <div className="flex items-center gap-3">
         <span className="relative flex shrink-0">
-          <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-500 opacity-75 motion-reduce:hidden" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
         </span>
         <p className="text-sm text-fg-muted">
           Ultimo check-up completato{" "}

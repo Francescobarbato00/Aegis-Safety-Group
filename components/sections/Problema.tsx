@@ -31,7 +31,7 @@ const risks: RiskCard[] = [
     bigValue: "Penale",
     bigValueLabel: "in caso di infortunio",
     description:
-      "Se accade un infortunio sul lavoro e viene accertato che gli obblighi normativi non erano rispettati, il datore di lavoro risponde personalmente — anche con conseguenze penali. Lesioni colpose gravi: reclusione da 3 mesi a 1 anno. Omicidio colposo: da 2 a 7 anni.",
+      "Con un infortunio e obblighi non rispettati, il datore di lavoro risponde personalmente, anche penalmente. Lesioni colpose gravi: reclusione da 3 mesi a 1 anno. Omicidio colposo: da 2 a 7 anni.",
     reference: "art. 590, c.3 e 589, c.2 Codice Penale",
     icon: Gavel,
     featured: true,
@@ -55,7 +55,7 @@ const risks: RiskCard[] = [
     bigValue: "Stop",
     bigValueLabel: "alle operazioni aziendali",
     description:
-      "L'Ispettorato del Lavoro può sospendere l'attività in caso di gravi irregolarità in materia di sicurezza, fino al ripristino della piena conformità.",
+      "L'Ispettorato può sospendere l'attività per gravi irregolarità, fino al ripristino della conformità.",
     reference: "art. 14 D.Lgs. 81/2008",
     icon: OctagonX,
   },
@@ -66,7 +66,7 @@ const risks: RiskCard[] = [
     bigValue: "Mesi",
     bigValueLabel: "di accertamenti possibili",
     description:
-      "Documentazione incompleta significa segnalazione, ispezioni approfondite, contestazioni dell'INL o dell'ASL. Procedimenti che possono durare mesi e creare incertezza operativa.",
+      "Documentazione incompleta significa segnalazioni, ispezioni e contestazioni di INL o ASL. Procedimenti che possono durare mesi.",
     reference: "art. 13 D.Lgs. 81/2008",
     icon: ShieldAlert,
   },
@@ -85,18 +85,17 @@ export function Problema() {
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
               Cosa rischi
             </p>
-            <h2 className="mt-4 text-balance font-[family-name:var(--font-sora)] text-3xl font-medium leading-tight tracking-tight text-fg-dark lg:text-5xl">
+            <h2 className="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-fg-dark lg:text-5xl">
               I conti che{" "}
-              <em className="font-[family-name:var(--font-instrument)] italic text-accent">
+              <span className="text-accent">
                 nessuno ti racconta
-              </em>
+              </span>
               .
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-fg-dark-muted lg:text-xl">
-              Tre sanzioni amministrative, una procedura penale, e l&apos;attività
-              ferma. Sono le conseguenze concrete previste dal D.Lgs. 81/2008 per
-              chi non rispetta gli obblighi sulla sicurezza sul lavoro. Numeri
-              reali, articoli precisi.
+              Tre sanzioni, una procedura penale, l&apos;attività ferma. Le
+              conseguenze concrete del D.Lgs. 81/2008 per chi non è in regola.
+              Numeri reali, articoli precisi.
             </p>
           </div>
         </FadeIn>
@@ -154,7 +153,7 @@ function RiskCardFeatured({ risk }: { risk: RiskCard }) {
         {/* Sinistra — identificatore + numero protagonista */}
         <div>
           <div className="flex items-center gap-3">
-            <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-fg-dark-muted">
+            <span className="text-sm font-medium text-fg-dark-muted">
               {risk.number}
             </span>
             <span className="h-px w-8 bg-white/[0.15]" />
@@ -165,7 +164,7 @@ function RiskCardFeatured({ risk }: { risk: RiskCard }) {
 
           {/* BIG VALUE — protagonista assoluto */}
           <div className="mt-6 lg:mt-8">
-            <p className="font-[family-name:var(--font-instrument)] text-6xl font-normal italic leading-[0.9] tracking-tight text-fg-dark lg:text-7xl xl:text-8xl">
+            <p className="text-6xl font-bold leading-[0.9] tracking-tight text-fg-dark lg:text-7xl xl:text-8xl">
               {risk.bigValue}
             </p>
             <p className="mt-3 text-sm text-fg-dark-muted">
@@ -189,7 +188,7 @@ function RiskCardFeatured({ risk }: { risk: RiskCard }) {
             </span>
           </div>
 
-          <h3 className="text-balance font-[family-name:var(--font-sora)] text-2xl font-medium leading-tight tracking-tight text-fg-dark lg:text-3xl xl:text-4xl">
+          <h3 className="text-balance text-2xl font-semibold leading-tight tracking-tight text-fg-dark lg:text-3xl xl:text-4xl">
             {risk.title}
           </h3>
 
@@ -208,7 +207,7 @@ function RiskCardMedium({ risk }: { risk: RiskCard }) {
     <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] p-6 transition-all duration-300 hover:border-white/[0.18] hover:bg-white/[0.04] lg:p-7">
       {/* Number + category */}
       <div className="mb-6 flex items-center gap-3">
-        <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-fg-dark-muted">
+        <span className="text-sm font-medium text-fg-dark-muted">
           {risk.number}
         </span>
         <span className="h-px w-6 bg-white/[0.15]" />
@@ -222,14 +221,14 @@ function RiskCardMedium({ risk }: { risk: RiskCard }) {
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-accent/[0.2] bg-accent/[0.08]">
           <Icon className="h-4 w-4 text-accent" />
         </span>
-        <p className="font-[family-name:var(--font-sora)] text-3xl font-medium leading-none tracking-tight text-fg-dark lg:text-4xl">
+        <p className="text-3xl font-medium leading-none tracking-tight text-fg-dark lg:text-4xl">
           {risk.bigValue}
         </p>
       </div>
       <p className="mb-5 mt-1 text-xs text-fg-dark-muted">{risk.bigValueLabel}</p>
 
       {/* Title */}
-      <h3 className="mb-3 font-[family-name:var(--font-sora)] text-lg font-medium leading-snug text-fg-dark">
+      <h3 className="mb-3 text-lg font-semibold leading-snug text-fg-dark">
         {risk.title}
       </h3>
 

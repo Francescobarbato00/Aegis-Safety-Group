@@ -14,7 +14,7 @@ export function ServizioCard({ service }: { service: Service }) {
       className={cn(
         "group relative flex h-full flex-col gap-4 rounded-xl border border-fg/[0.08] bg-white p-5 lg:p-6",
         "transition-all duration-300 ease-out",
-        "hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_24px_-12px_rgba(6,182,212,0.2)]",
+        "hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_24px_-12px_rgba(30,143,69,0.2)]",
         "motion-reduce:hover:translate-y-0",
       )}
     >
@@ -24,7 +24,7 @@ export function ServizioCard({ service }: { service: Service }) {
           {createElement(getIcon(service.icon), {
             className: "h-3.5 w-3.5 text-accent",
           })}
-          <span className="font-[family-name:var(--font-sora)] text-[11px] font-medium uppercase tracking-wider text-accent">
+          <span className="text-[11px] font-medium uppercase tracking-wider text-accent">
             {service.code}
           </span>
         </span>
@@ -37,7 +37,7 @@ export function ServizioCard({ service }: { service: Service }) {
       </div>
 
       {/* Title */}
-      <h4 className="font-[family-name:var(--font-sora)] text-lg font-medium leading-tight text-fg lg:text-xl">
+      <h4 className="text-lg font-semibold leading-tight text-fg lg:text-xl">
         {service.title}
       </h4>
 

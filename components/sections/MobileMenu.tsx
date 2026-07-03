@@ -11,6 +11,7 @@ type NavItem = { label: string; href: string };
 const navItems: NavItem[] = [
   { label: "Servizi", href: "#servizi" },
   { label: "Come lavoriamo", href: "#processo" },
+  { label: "Approccio", href: "#approccio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contatti", href: "#contatti" },
 ];
@@ -93,7 +94,15 @@ export function MobileMenu({ open, onClose, onOpenBooking }: Props) {
           <div className="relative flex h-full flex-col px-6 py-5">
             {/* Header */}
             <div className="flex shrink-0 items-center justify-between">
-              <Logo variant="dark" size={30} />
+              <span className="flex items-center gap-2.5">
+                <Logo variant="dark" type="symbol" height={34} />
+                <span className="flex items-baseline gap-1.5">
+                  <span className="text-lg font-bold tracking-tight text-fg">
+                    Aegis
+                  </span>
+                  <span className="text-xs text-fg-muted">Safety Group</span>
+                </span>
+              </span>
               <button
                 onClick={onClose}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-fg/[0.1] transition-colors hover:border-fg/[0.3]"
@@ -117,10 +126,10 @@ export function MobileMenu({ open, onClose, onOpenBooking }: Props) {
                   onClick={() => handleNavClick(item.href)}
                   className="group flex items-baseline gap-4 py-3 text-left"
                 >
-                  <span className="w-8 font-[family-name:var(--font-sora)] text-sm font-medium text-accent/60">
+                  <span className="w-8 text-sm font-medium text-accent/60">
                     0{i + 1}
                   </span>
-                  <span className="font-[family-name:var(--font-sora)] text-4xl font-medium tracking-tight text-fg transition-colors group-hover:text-accent">
+                  <span className="text-4xl font-semibold tracking-tight text-fg transition-colors group-hover:text-accent">
                     {item.label}
                   </span>
                   <ArrowUpRight className="h-5 w-5 self-center text-fg-muted opacity-0 transition-opacity group-hover:opacity-100" />

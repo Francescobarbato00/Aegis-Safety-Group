@@ -1,8 +1,0 @@
-<svg width="250" height="64" viewBox="0 0 250 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aegis Safety Group">
-  <g transform="translate(6 8) scale(0.4138)">
-    <path d="M50 4 L88 19 L88 53 Q88 90 50 112 Q12 90 12 53 L12 19 Z" fill="#0F1B2D"/>
-    <path d="M30 70 L44 84 L72 44" fill="none" stroke="#06B6D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="62" y="41" font-family="Sora, system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="600" fill="#0F1B2D" letter-spacing="-1">Aegis</text>
-  <text x="150" y="41" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="400" fill="#5B6472">Safety Group</text>
-</svg>

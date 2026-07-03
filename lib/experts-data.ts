@@ -5,7 +5,6 @@ export type Expert = {
   specialization: string;
   bio: string;
   initials: string;
-  accent: "cyan" | "emerald" | "amber" | "violet";
   experience: string; // es. "12 anni"
 };
 
@@ -17,7 +16,6 @@ export const experts: Expert[] = [
     specialization: "DVR, DUVRI, valutazioni rischi",
     bio: "Ingegnere della sicurezza, segue la redazione documentale per aziende di ogni settore. Esperto in valutazioni rischi specifiche.",
     initials: "MB",
-    accent: "cyan",
     experience: "14 anni",
   },
   {
@@ -27,7 +25,6 @@ export const experts: Expert[] = [
     specialization: "Corsi RSPP, RLS, Art. 37",
     bio: "Formatrice qualificata, coordina i percorsi formativi per lavoratori e figure della sicurezza in presenza e online.",
     initials: "GF",
-    accent: "emerald",
     experience: "11 anni",
   },
   {
@@ -37,7 +34,6 @@ export const experts: Expert[] = [
     specialization: "Piani emergenza, antincendio, primo soccorso",
     bio: "Tecnico antincendio, progetta piani di emergenza e gestisce la formazione pratica per squadre di emergenza.",
     initials: "LC",
-    accent: "amber",
     experience: "16 anni",
   },
   {
@@ -47,7 +43,6 @@ export const experts: Expert[] = [
     specialization: "Assistenza annuale, audit, espansioni",
     bio: "Coordina l'assistenza continuativa e supporta le aziende nei momenti di crescita, audit e adeguamenti normativi.",
     initials: "SG",
-    accent: "violet",
     experience: "13 anni",
   },
 ];

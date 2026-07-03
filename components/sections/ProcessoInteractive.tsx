@@ -116,13 +116,13 @@ export function ProcessoInteractive() {
               className={cn(
                 "flex shrink-0 snap-start items-center gap-2.5 rounded-lg border px-4 py-2.5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                 active
-                  ? "border-accent/50 bg-accent/[0.08] text-accent shadow-[0_4px_20px_-6px_rgba(6,182,212,0.3)]"
+                  ? "border-accent/50 bg-accent/[0.08] text-accent shadow-[0_4px_20px_-6px_rgba(30,143,69,0.3)]"
                   : "border-fg/[0.08] bg-white text-fg-muted active:bg-fg/[0.04]",
               )}
             >
               <span
                 className={cn(
-                  "rounded border px-1.5 py-0.5 font-[family-name:var(--font-sora)] text-xs font-medium",
+                  "rounded border px-1.5 py-0.5 text-xs font-medium",
                   active
                     ? "border-accent/50 bg-accent/[0.12]"
                     : "border-fg/[0.08] bg-fg/[0.04]",
@@ -159,7 +159,7 @@ export function ProcessoInteractive() {
                 className={cn(
                   "group relative w-full rounded-xl border p-5 text-left transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                   active
-                    ? "border-accent/50 bg-accent/[0.04] shadow-[0_0_0_1px_rgba(6,182,212,0.08),0_12px_32px_-12px_rgba(6,182,212,0.2)] active:bg-accent/[0.08] motion-reduce:active:bg-accent/[0.04]"
+                    ? "border-accent/50 bg-accent/[0.04] shadow-[0_0_0_1px_rgba(30,143,69,0.08),0_12px_32px_-12px_rgba(30,143,69,0.2)] active:bg-accent/[0.08] motion-reduce:active:bg-accent/[0.04]"
                     : "border-fg/[0.08] bg-white hover:border-fg/[0.2] hover:shadow-sm active:bg-accent/[0.08] motion-reduce:active:bg-accent/[0.04]",
                 )}
               >
@@ -167,7 +167,7 @@ export function ProcessoInteractive() {
                   {/* Number chip */}
                   <span
                     className={cn(
-                      "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border font-[family-name:var(--font-sora)] text-sm font-medium transition-all duration-300",
+                      "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border text-sm font-medium transition-all duration-300",
                       active
                         ? "border-accent/50 bg-accent/[0.12] text-accent"
                         : "border-fg/[0.08] bg-fg/[0.04] text-fg-muted group-hover:border-fg/[0.2]",
@@ -178,7 +178,7 @@ export function ProcessoInteractive() {
 
                   {/* Text */}
                   <div className="min-w-0 flex-1 pt-0.5">
-                    <h3 className="font-[family-name:var(--font-sora)] text-base font-medium leading-snug text-fg lg:text-[17px]">
+                    <h3 className="text-base font-semibold leading-snug text-fg lg:text-[17px]">
                       {step.title}
                     </h3>
                     <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-fg-muted">
@@ -212,7 +212,7 @@ export function ProcessoInteractive() {
                     style={{
                       animation: "process-progress 4s linear forwards",
                       animationPlayState: playing ? "running" : "paused",
-                      boxShadow: "0 0 6px rgba(6,182,212,0.4)",
+                      boxShadow: "0 0 6px rgba(30,143,69,0.4)",
                     }}
                     className="absolute bottom-0 left-0 h-[2px] rounded-full bg-accent"
                   />
@@ -241,7 +241,7 @@ export function ProcessoInteractive() {
               className="screen-flash-sweep absolute inset-y-0 -left-1/2 w-full"
               style={{
                 background:
-                  "linear-gradient(90deg, transparent, rgba(6,182,212,0.15), transparent)",
+                  "linear-gradient(90deg, transparent, rgba(30,143,69,0.15), transparent)",
                 filter: "blur(40px)",
               }}
             />
@@ -259,8 +259,8 @@ export function ProcessoInteractive() {
             </span>
             <div className="flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:hidden" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60 motion-reduce:hidden" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
               <span className="font-mono text-xs text-fg-muted">live</span>
             </div>

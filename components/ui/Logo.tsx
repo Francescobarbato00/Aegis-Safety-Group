@@ -1,64 +1,50 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import logoFull from "@/public/brand/aegis-logo-full.png";
+import logoFullDark from "@/public/brand/aegis-logo-full-onDark.png";
+import symbol from "@/public/brand/aegis-symbol.png";
+import symbolDark from "@/public/brand/aegis-symbol-onDark.png";
 
 type LogoProps = {
-  /** "dark" = symbol navy (for light backgrounds), "light" = symbol white (for dark backgrounds) */
+  /** "dark" = logo per sfondo chiaro; "light" = versione onDark per sfondo scuro */
   variant?: "dark" | "light";
-  showText?: boolean;
+  /** "full" = logo completo con wordmark+payoff; "symbol" = solo scudo */
+  type?: "full" | "symbol";
   className?: string;
-  /** Symbol height in px */
-  size?: number;
+  /** Altezza in px (la larghezza si calcola dall'aspect ratio reale) */
+  height?: number;
+  priority?: boolean;
 };
 
 export function Logo({
   variant = "dark",
-  showText = true,
+  type = "full",
   className,
-  size = 32,
+  height = 40,
+  priority = false,
 }: LogoProps) {
-  const markColor = variant === "dark" ? "#0F1B2D" : "#FFFFFF";
-  const textColor = variant === "dark" ? "text-fg" : "text-fg-dark";
-  const mutedColor = variant === "dark" ? "text-fg-muted" : "text-fg-dark-muted";
+  const src =
+    type === "full"
+      ? variant === "dark"
+        ? logoFull
+        : logoFullDark
+      : variant === "dark"
+        ? symbol
+        : symbolDark;
+
+  // Aspect ratio reali dei PNG: full = 349/255, symbol = 148/132
+  const aspectRatio = type === "full" ? 349 / 255 : 148 / 132;
+  const width = Math.round(height * aspectRatio);
 
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      {/* Symbol — shield + check */}
-      <svg
-        width={size * (100 / 116)}
-        height={size}
-        viewBox="0 0 100 116"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <path
-          d="M50 4 L88 19 L88 53 Q88 90 50 112 Q12 90 12 53 L12 19 Z"
-          fill={markColor}
-        />
-        <path
-          d="M30 70 L44 84 L72 44"
-          fill="none"
-          stroke="#06B6D4"
-          strokeWidth="8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-
-      {/* Wordmark */}
-      {showText && (
-        <span className="flex items-baseline gap-1.5">
-          <span
-            className={cn(
-              "font-[family-name:var(--font-sora)] text-lg font-medium tracking-tight",
-              textColor,
-            )}
-          >
-            Aegis
-          </span>
-          <span className={cn("text-xs", mutedColor)}>Safety Group</span>
-        </span>
-      )}
-    </span>
+    <Image
+      src={src}
+      alt="Aegis Safety Group"
+      height={height}
+      width={width}
+      className={cn("object-contain", className)}
+      priority={priority}
+      style={{ height: `${height}px`, width: "auto" }}
+    />
   );
 }

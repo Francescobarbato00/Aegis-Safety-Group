@@ -30,10 +30,10 @@ export function StepConfirm({ onClose }: { onClose: () => void }) {
   if (confirmed) {
     return (
       <div className="py-8 text-center">
-        <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50">
-          <Check className="h-8 w-8 text-emerald-600" />
+        <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-full border border-accent/30 bg-accent/10">
+          <Check className="h-8 w-8 text-accent" />
         </div>
-        <h3 className="mb-3 font-[family-name:var(--font-sora)] text-2xl font-medium text-fg">
+        <h3 className="mb-3 text-2xl font-semibold text-fg">
           Richiesta inviata
         </h3>
         <p className="mb-2 leading-relaxed text-fg-muted">
@@ -56,7 +56,7 @@ export function StepConfirm({ onClose }: { onClose: () => void }) {
 
   return (
     <div>
-      <h3 className="mb-1 font-[family-name:var(--font-sora)] text-xl font-medium text-fg">
+      <h3 className="mb-1 text-xl font-semibold text-fg">
         Conferma la prenotazione
       </h3>
       <p className="mb-6 text-sm text-fg-muted">

@@ -63,17 +63,17 @@ export function ChatPanel({
           <div className="flex shrink-0 items-center gap-2.5 bg-bg-dark px-4 py-3">
             {/* Avatar */}
             <div className="relative">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent font-[family-name:var(--font-sora)] text-base font-medium text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-base font-medium text-white">
                 {chatbotPersona.initial}
               </div>
-              <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-bg-dark bg-emerald-500" />
+              <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-bg-dark bg-accent" />
             </div>
             <div className="flex-1">
-              <p className="font-[family-name:var(--font-sora)] text-sm font-medium text-fg-dark">
+              <p className="text-sm font-medium text-fg-dark">
                 {chatbotPersona.name}
               </p>
               <p className="flex items-center gap-1.5 text-xs text-fg-dark-muted">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 {chatbotPersona.role} · Online
               </p>
             </div>

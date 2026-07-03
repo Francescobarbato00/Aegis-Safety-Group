@@ -297,10 +297,10 @@ function inputStyles(hasError: boolean) {
 function SuccessState() {
   return (
     <div className="rounded-2xl border border-fg/[0.08] bg-white p-8 text-center shadow-[0_24px_60px_-24px_rgba(15,27,45,0.12)] lg:p-12">
-      <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50">
-        <Check className="h-8 w-8 text-emerald-600" />
+      <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-full border border-accent/30 bg-accent/10">
+        <Check className="h-8 w-8 text-accent" />
       </div>
-      <h3 className="mb-3 font-[family-name:var(--font-sora)] text-2xl font-medium text-fg">
+      <h3 className="mb-3 text-2xl font-semibold text-fg">
         Richiesta inviata
       </h3>
       <p className="mx-auto max-w-md leading-relaxed text-fg-muted">

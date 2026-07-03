@@ -25,7 +25,7 @@ export function StepDateTime() {
 
   return (
     <div>
-      <h3 className="mb-1 font-[family-name:var(--font-sora)] text-xl font-medium text-fg">
+      <h3 className="mb-1 text-xl font-semibold text-fg">
         Quando ti viene comodo?
       </h3>
       <p className="mb-6 text-sm text-fg-muted">
@@ -75,7 +75,7 @@ export function StepDateTime() {
               className={cn(
                 "flex min-w-[64px] shrink-0 flex-col items-center gap-1 rounded-xl border px-4 py-3 transition-all",
                 selectedDayIdx === i
-                  ? "border-accent bg-accent/[0.06] shadow-[0_0_0_1px_rgba(6,182,212,0.2)]"
+                  ? "border-accent bg-accent/[0.06] shadow-[0_0_0_1px_rgba(30,143,69,0.2)]"
                   : "border-fg/[0.08] bg-white hover:border-fg/[0.2]",
               )}
             >
@@ -87,7 +87,7 @@ export function StepDateTime() {
               >
                 {day.dayLabel}
               </span>
-              <span className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+              <span className="text-lg font-medium text-fg">
                 {day.dayNumber}
               </span>
               <span className="text-[10px] text-fg-muted">{day.monthLabel}</span>
@@ -133,7 +133,7 @@ export function StepDateTime() {
                     !slot.available
                       ? "cursor-not-allowed border-fg/[0.05] bg-fg/[0.02] text-fg-muted/40 line-through"
                       : isSelected
-                        ? "border-accent bg-accent text-white shadow-[0_4px_12px_-4px_rgba(6,182,212,0.4)]"
+                        ? "border-accent bg-accent text-white shadow-[0_4px_12px_-4px_rgba(30,143,69,0.4)]"
                         : "border-fg/[0.1] bg-white text-fg hover:border-accent/40 hover:bg-accent/[0.04]",
                   )}
                 >

@@ -23,6 +23,7 @@ export function Faq() {
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-accent/[0.06] blur-3xl"
+        style={{ transform: "translateX(-50%) translateZ(0)", contain: "paint" }}
       />
       <div
         aria-hidden
@@ -39,11 +40,11 @@ export function Faq() {
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
               Domande frequenti
             </p>
-            <h2 className="mt-4 text-balance font-[family-name:var(--font-sora)] text-3xl font-medium leading-tight tracking-tight text-fg-dark lg:text-5xl xl:text-6xl">
+            <h2 className="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-fg-dark lg:text-5xl xl:text-6xl">
               Domande?{" "}
-              <em className="font-[family-name:var(--font-instrument)] italic text-accent">
+              <span className="text-accent">
                 Risposte.
-              </em>
+              </span>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-fg-dark-muted">
               Se hai un dubbio specifico non in elenco, scrivici direttamente —

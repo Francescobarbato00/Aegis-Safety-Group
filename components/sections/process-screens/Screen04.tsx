@@ -8,7 +8,7 @@ export function Screen04() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h4 className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+          <h4 className="text-lg font-semibold text-fg">
             Monitoraggio attivo
           </h4>
           <p className="mt-1 font-mono text-xs text-fg-muted">
@@ -18,10 +18,10 @@ export function Screen04() {
         </div>
         <div className="flex items-center gap-1.5">
           <span className="relative flex">
-            <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-500 opacity-75 motion-reduce:hidden" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-wider text-emerald-700">
+          <span className="font-mono text-[10px] uppercase tracking-wider text-accent">
             attivo
           </span>
         </div>
@@ -29,7 +29,7 @@ export function Screen04() {
 
       {/* Metric cards */}
       <div className="grid grid-cols-3 gap-2.5">
-        <MetricCard label="Conformità" value="96%" accent="emerald" />
+        <MetricCard label="Conformità" value="96%" accent="accent" />
         <MetricCard label="Prossima scadenza" value="47gg" accent="amber" />
         <MetricCard label="Aggiornamenti" value="3" accent="accent" />
       </div>
@@ -52,7 +52,7 @@ export function Screen04() {
           />
           <TimelineEvent
             date="02 nov"
-            icon={<FileCheck className="h-3.5 w-3.5 text-emerald-600" />}
+            icon={<FileCheck className="h-3.5 w-3.5 text-accent" />}
             label="Audit interno completato — nessuna criticità rilevata"
           />
           <TimelineEvent
@@ -73,11 +73,10 @@ function MetricCard({
 }: {
   label: string;
   value: string;
-  accent: "accent" | "emerald" | "amber";
+  accent: "accent" | "amber";
 }) {
   const valueColor = {
     accent: "text-accent",
-    emerald: "text-emerald-700",
     amber: "text-amber-700",
   }[accent];
 
@@ -88,7 +87,7 @@ function MetricCard({
       </p>
       <p
         className={cn(
-          "mt-1.5 font-[family-name:var(--font-sora)] text-xl font-medium leading-none",
+          "mt-1.5 text-xl font-medium leading-none",
           valueColor,
         )}
       >

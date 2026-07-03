@@ -20,12 +20,20 @@ export function LegalLayout({ title, subtitle, children }: Props) {
         <Container>
           <div className="flex h-16 items-center justify-between lg:h-20">
             {/* Logo */}
-            <Link href="/" aria-label="Aegis Safety Group — home" className="group">
-              <Logo
-                variant="dark"
-                size={32}
-                className="transition-opacity group-hover:opacity-80"
-              />
+            <Link
+              href="/"
+              aria-label="Aegis Safety Group — home"
+              className="group flex items-center gap-2.5 transition-opacity hover:opacity-80"
+            >
+              <Logo variant="dark" type="symbol" height={34} />
+              <span className="flex items-baseline gap-1.5">
+                <span className="text-lg font-bold tracking-tight text-fg">
+                  Aegis
+                </span>
+                <span className="hidden text-xs text-fg-muted sm:inline">
+                  Safety Group
+                </span>
+              </span>
             </Link>
             {/* Back to home */}
             <Link
@@ -44,7 +52,7 @@ export function LegalLayout({ title, subtitle, children }: Props) {
         <article className="mx-auto max-w-3xl py-16 lg:py-24">
           {/* Title block */}
           <div className="mb-12 lg:mb-16">
-            <h1 className="font-[family-name:var(--font-sora)] text-4xl font-medium tracking-tight text-fg lg:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-fg lg:text-5xl">
               {title}
             </h1>
             {subtitle && (
@@ -99,7 +107,7 @@ export function LegalSection({
 }) {
   return (
     <section className="scroll-mt-24">
-      <h2 className="mb-4 flex items-baseline gap-3 font-[family-name:var(--font-sora)] text-xl font-medium text-fg lg:text-2xl">
+      <h2 className="mb-4 flex items-baseline gap-3 text-xl font-semibold text-fg lg:text-2xl">
         <span className="text-base text-accent">{number}</span>
         {title}
       </h2>

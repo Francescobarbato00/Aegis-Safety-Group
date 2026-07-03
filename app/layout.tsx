@@ -1,26 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Sora, Inter, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  display: "swap",
-});
-
+// Brand Book Aegis (pag. 26): Inter primario per body/UI/dati.
+// I titoli ("Inter Display Bold") usano Inter weight 700 + tracking-tight.
+// Inter è variable font e include già le ottiche display via next/font/google.
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +52,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAFAF7",
+  themeColor: "#071E3A",
   width: "device-width",
   initialScale: 1,
 };
@@ -73,11 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="it"
-      className={`${sora.variable} ${inter.variable} ${instrumentSerif.variable}`}
-    >
-      <body className="font-inter">
+    <html lang="it" className={inter.variable}>
+      <body className="font-[family-name:var(--font-inter)]">
         {children}
         <CustomCursor />
       </body>

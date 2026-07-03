@@ -12,6 +12,7 @@ import { useBooking } from "@/components/booking/BookingContext";
 const navLinks = [
   { label: "Servizi", href: "#servizi" },
   { label: "Come lavoriamo", href: "#processo" },
+  { label: "Approccio", href: "#approccio" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -53,13 +54,17 @@ export function Header() {
             <a
               href="#top"
               aria-label="Aegis Safety Group — home"
-              className="group"
+              className="group flex items-center gap-2.5 transition-opacity hover:opacity-80"
             >
-              <Logo
-                variant="dark"
-                size={32}
-                className="transition-opacity group-hover:opacity-80"
-              />
+              <Logo variant="dark" type="symbol" height={38} priority />
+              <span className="flex items-baseline gap-1.5">
+                <span className="text-lg font-bold tracking-tight text-fg">
+                  Aegis
+                </span>
+                <span className="hidden text-xs text-fg-muted sm:inline">
+                  Safety Group
+                </span>
+              </span>
             </a>
 
             {/* Desktop nav */}

@@ -23,7 +23,7 @@ export function Screen01() {
     <div className="flex h-full flex-col gap-6">
       {/* Header info */}
       <div>
-        <h4 className="font-[family-name:var(--font-sora)] text-lg font-medium text-fg">
+        <h4 className="text-lg font-semibold text-fg">
           Analisi azienda
         </h4>
         <p className="mt-1 font-mono text-xs text-fg-muted">
@@ -39,7 +39,7 @@ export function Screen01() {
           <div className="absolute inset-0 rounded-full border-2 border-accent/[0.2]" />
           {/* Spinning arc */}
           <div className="absolute inset-0 animate-spin rounded-full border-2 border-transparent border-t-accent motion-reduce:animate-none" />
-          <span className="font-[family-name:var(--font-sora)] text-xs font-medium text-accent">
+          <span className="text-xs font-medium text-accent">
             63%
           </span>
         </div>
